@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <title>Program List</title>
+    </head>
+    <body>
+        <a href='index.html'>← Back to Hub</a>
+        <h1>Command-line Program List</h1>
+        <p>Enter one of the program numbers 
+            shown in the command-line program box 
+            on my home page and press Enter 
+            (i.e to run program 1 on this list you would type
+            <strong>1</strong> at the <strong>>> </strong> 
+            prompt.)
+        <p>Now the program you selected will run.
+            Hopefully I've made then user friendly enough :).</p>
+        <p>Each program has a number, a title, and a short description 
+            of what the program does.</p>
+        <ol>
+        </ol>
+    </body>
+    <script>
+        let programList = [
+            "gpaCalc - A program to calculate your academic grade-point-average (GPA)",
+            "multiplyTable - A program to generate multiplication tables",
+            "prizePool - A coin-flipping lottery game (no payouts)",
+            "tagTune [INCOMPLETE] - A program for making music",
+            "lottery - A Powerball-based lottery game (again, no payouts)"
+        ]
+        for (let prog of programList) {
+            let e = document.createElement('li')
+            e.innerHTML = (programList.indexOf(prog) + 1) + ' - ' + prog;
+            document.getElementsByTagName('ol')[0].appendChild(e)
+        }
+    </script>
+</html>
